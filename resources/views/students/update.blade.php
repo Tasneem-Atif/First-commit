@@ -23,14 +23,6 @@
         <div class="form-group">
           <input type="text" class="form-control" id="grade" name="grade" value="{{ $student->grade }}" placeholder="Enter Grade">
         </div>
-        {{-- <div class="form-group py-3">
-            <select id="gender" name="gender" value="{{ $student->gender }}" class="form-control">
-              <option selected>Choose...</option>
-              <option value="male" >male</option>
-              <option value="female" >female</option>
-            </select>
-          </div> --}}
-
           <div class="form-group py-3">
     <select id="gender" name="gender" class="form-control">
         <option value="male" {{ $student->gender == 'male' ? 'selected' : '' }}>Male</option>
@@ -39,9 +31,6 @@
 </div>
 
 
-          {{-- <div class="form-group py-3">
-            <input type="file" class="form-control" id="image" name="image" value="{{ $student->image }}" placeholder="Enter image">
-          </div> --}}
 
           <div class="form-group py-3">
     <label for="image">Current Image:</label>
