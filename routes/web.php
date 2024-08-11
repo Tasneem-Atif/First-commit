@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\track_controller;
 use App\Models\Students;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\course_controller;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +28,5 @@ Route::get('/tracks/{id}/createtrack', [track_controller::class, 'createtrack'])
 Route::post('/tracks/store', [track_controller::class, 'store'])->name('tracks.store');
 Route::get('/tracks/{id}/edit_track', ([track_controller::class, 'edit_track']))->name('tracks.edit_track');
 Route::put('/tracks/{id}/update_track', ([track_controller::class, 'update_track']))->name('tracks.update_track');
+
+Route::resource('courses', course_controller::class);
